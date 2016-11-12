@@ -29,6 +29,7 @@ print "Count      : ", args['count']
 #NETWORK STUF
 ip = IP()
 ip.dst = args['destination']
+#Crating random ip address
 ip.src = socket.inet_ntoa(struct.pack('>I', random.randint(1, 0xffffffff)))
 
 tcp = TCP()
